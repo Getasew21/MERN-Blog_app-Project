@@ -7,7 +7,7 @@ interface Props {
 
 const Posts: React.FC<Props> = ({ posts }) => {
   return (
-    <div className='Posts'>
+    <div className='Posts mt-20'>
       {posts.map((p) => (
         <Post key={p.id} post={p} />
       ))}

@@ -4,27 +4,22 @@ import { useContext } from 'react'
 import {Context} from '../context/Context'
 function Topbar() {
   const {user,dispatch}=useContext(Context);
-  
   const handleLogout = ()=>{
-    dispatch({type: "LogOut"})
+  dispatch({type: "LogOut"})
   };
   const PF = "http://localhost:5000/images/"
-  console.log(user)
   return (
       <div className='Top-bar '>
       <div className='Top-bar-logo text-white'>
-      {/* <i className="fa-brands fa-square-facebook"></i>
-      <i className="fa-brands fa-twitter"></i>
-      <i className="fa-brands fa-instagram"></i> */}
       <h2   className="text-3xl font-sigmar-one-regular text-[#FFA726] text-center py-4">BlogIY</h2>
       </div>
       <div className='Top-bar-nav '>
-         <ul className='Top-bar-nav-ul  items-center justify-end h-full '>
+         <ul className='Top-bar-nav-ul  items-center justify-end h-full hidden md:hidden lg:flex '>
              <NavLink  style={{textDecoration:"none",color:"rgb(136, 134, 134)"}} to='/'><li className='hover:text-black'>HOME</li></NavLink> 
              <NavLink style={{textDecoration:"none",color:"rgb(136, 134, 134)"}} to='/register'><li className='hover:text-black'>REGISTER</li></NavLink>
              <NavLink style={{textDecoration:"none",color:"rgb(136, 134, 134)"}} to='/write'><li className='hover:text-black'>WRITE</li></NavLink>
              <NavLink style={{textDecoration:"none",color:"inherit"}} to='/about'><li className='hover:text-black'>ABOUT</li></NavLink>
-             <li className='Top-bar-nav-ul-logout hover:text-black' onClick={handleLogout}>{user && "LOGOUT"}</li>
+             {/* <li className='Top-bar-nav-ul-logout hover:text-black' onClick={handleLogout}>{user && "LOGOUT"}</li> */}
          </ul>
       </div>
 

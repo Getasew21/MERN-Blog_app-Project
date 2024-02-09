@@ -4,7 +4,7 @@ import SinglePost from '../components/SinglePost';
 
 const Single: React.FC = () => {
   return (
-    <div className='single'>
+    <div className='single mt-20'>
       <SinglePost />
       <Sidbar />
     </div>

@@ -2,9 +2,9 @@
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-800 text-center text-white p-4 md:p-8 font-montserrat">
-      <div className="container mx-auto flex flex-wrap justify-between">
-        <div className="w-full md:w-1/3 mb-4 md:mb-0">
+    <footer className="bg-gray-800 text-center  a text-white  md:p-8 font-montserrat">
+      <div className="container mx-auto flex justify-center flex-wrap ">
+        <div className="w-full flex flex-col   md:w-1/3 mb-4 md:mb-0">
           <h2 className="text-lg font-semibold mb-2">Contact Information</h2>
           <p>
             <i className="fas fa-envelope mr-2"></i>
@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
           </p>
         </div>
 
-        <div className="w-full md:w-1/3 mb-4 md:mb-0">
+        <div className="w-full flex   flex-col   md:w-1/3 mb-4 md:mb-0">
           <h2 className="text-lg font-semibold mb-2">Follow Us</h2>
           <div className="flex justify-center items-center space-x-2">
             <i className="fab fa-facebook"></i>
@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="w-full md:w-1/3">
+        <div className="w-full  flex flex-col justify-center  md:w-1/3">
           <h2 className="text-lg font-semibold mb-2">Additional Info</h2>
           <p>About Us</p>
           <p>Privacy Policy</p>

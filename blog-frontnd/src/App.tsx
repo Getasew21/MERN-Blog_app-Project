@@ -1,8 +1,6 @@
 
 import Topbar from './components/Topbar'
 import Footer from './components/Footer'
-
-// import Searchbar from './components/Searchbar'
 import './App.css'
 import Home from './pages/Home'
 import Single from './pages/Single'
@@ -14,13 +12,15 @@ import {BrowserRouter as Router , Route, Routes} from 'react-router-dom'
 import { useContext } from 'react'
 import {Context} from './context/Context'
 import About from './components/About'
+import Navbar from './components/Navbar'
 
 function App() {
  const {user}=useContext(Context)
   return (
     <div className='app'>
       <Router>
-      <Topbar />
+      {/* <Topbar /> */}
+      <Navbar/>
     <Routes>
          <Route path='/' element={<Home/>}/>
          <Route path='/register' element={user?<Home/>:<Register/>}/>

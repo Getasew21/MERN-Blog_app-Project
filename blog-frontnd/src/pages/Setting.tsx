@@ -25,6 +25,7 @@ function Setting() {
     setUsername(user.username);
     setEmail(user.email);
     setPassword(user.password);
+    handleSubmit;
   }, [user]);
 
 
@@ -90,13 +91,16 @@ function Setting() {
   //   }
   // };
 console.log(user)
+const handleLogout = ()=>{
+  dispatch({type: "LogOut"})
+  };
 // const PF = "http://localhost:5000/images/"
   return (
-    <div className="settings">
-      <div className="settingWrapper">
-        <div className="settingsTitle">
+    <div className="settings mt-20">
+      <div className="settingWrapper ">
+        <div className="settingsTitle mt-100px">
           <span className="settingsUpdateTitle">Update Your Account</span>
-          <span className="settingsDeleteTitle" onClick={handleDelete} >Delete Your Account</span>
+          <span className="settingsDeleteTitle bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded cursor-pointer" onClick={handleDelete} >Delete Account</span>
         </div>
         <form className="settingsForm" onSubmit={handleSubmit}>
           <label>Profile Picture</label>
@@ -117,25 +121,28 @@ console.log(user)
               onChange={(e)=>setFile(e.target.files![0])}
             />
           </div>
-          <label>Username</label>
+          <label className='font-semibold text-lg'>Username</label>
           <input
             type="text"
             defaultValue={user.username}
             onChange={(e) => setUsername(e.target.value)}
           />
-          <label>Email</label>
+          <label className='font-semibold text-lg'>Email</label>
           <input
             type="email"
             defaultValue={user.email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <label>Password</label>
+          <label className='font-semibold text-lg'>Password</label>
           <input
             type="password"
             defaultValue={user.password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button className="settingsSubmit " type="submit">Update</button>
+          <button className="settingsSubmit bg-[#FFA726] text-white font-bold " type="submit">Update</button>
+          <li className='Top-bar-nav-ul-logout cursor-pointer hover:text-black font-semibold text-lg list-none' onClick={handleLogout}>
+  {user && "LOGOUT"}
+</li>
           {success && (
             <span style={{ color: "green", textAlign: "center", margin: "20px" }}>
               Updated successfully!!
