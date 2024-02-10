@@ -24,10 +24,10 @@ function Sidebar() {
   const PF = "http://localhost:5000/images/";
 
   return (
-    <div className="Sidebar hidden md:hidden lg:flex text-center justify-center">
+    <div className="Sidebar hidden md:hidden lg:flex text-center justify-center mt-20">
       <div className="Sidebar-About">
         <span>ABOUT ME</span>
-        {user && <img src={PF + user.profilePic} alt="" />}
+        {user && <img  src={PF + user.profilePic} alt="" />}
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos eum
           veritatis quos,
