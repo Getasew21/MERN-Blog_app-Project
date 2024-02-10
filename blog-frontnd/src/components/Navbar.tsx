@@ -25,8 +25,8 @@ function Navbar() {
           <NavLink style={{ textDecoration: "none", color: "rgb(136, 134, 134)" }} to='/register'><li className='md:ml-8 text-xl text-gray-100 md:text-gray-800 hover:text-gray-400 duration-500 md:my-0 my-7'>REGISTER</li></NavLink>
           <NavLink style={{ textDecoration: "none", color: "rgb(136, 134, 134)" }} to='/write'><li className='md:ml-8 text-xl text-gray-100 md:text-gray-800 hover:text-gray-400 duration-500 md:my-0 my-7'>WRITE</li></NavLink>
           <NavLink style={{ textDecoration: "none", color: "rgb(136, 134, 134)" }} to='/about'><li className='md:ml-8 text-xl text-gray-100 md:text-gray-800 hover:text-gray-400 duration-500 md:my-0 my-7'>ABOUT</li></NavLink>
-          <NavLink style={{ textDecoration: "none", color: "rgb(136, 134, 134)" }} to="/setting"><li className={`md:ml-8 text-xl text-gray-100 md:text-gray-800 hover:text-gray-400 
- duration-500 md:my-0 my-7 `}>SETTING</li></NavLink>
+          <NavLink style={{ textDecoration: "none", color: "rgb(136, 134, 134)" }} to="/setting"><li className='md:ml-8 text-xl text-gray-100 md:text-gray-800 hover:text-gray-400 
+ duration-500 md:my-0 my-7 '>SETTING</li></NavLink>
           {user && (
           <NavLink to="/setting" key="profileimg" className="hidden md:flex  ">
             {user.profilePic && (
