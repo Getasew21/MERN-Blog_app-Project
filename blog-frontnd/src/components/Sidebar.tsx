@@ -26,17 +26,16 @@ function Sidebar() {
   const PF = "http://localhost:5000/images/";
 
   return (
-    <div className="Sidebar hidden md:hidden lg:flex text-center justify-center mt-20">
-      <div className="Sidebar-About">
+    <div className="Sidebar hidden  lg:flex text-center justify-center mt-20">
+      <div className="Sidebar-About  w-full h-auto rounded-lg shadow-md flex items-center pr-7">
         <span>ABOUT ME</span>
         {user && <img  src={PF + user.profilePic} alt="" />}
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos eum
-          veritatis quos,
+        <p className="self-start">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
         </p>
       </div>
 
-      <div className="Sidebar-Categories">
+      <div className="Sidebar-Categories w-full h-auto rounded-lg shadow-md flex items-center">
         <span>CATEGORIES</span>
         <ul className="Sidebar-Categories-lists">
           {cats.map((cat, index) => (
@@ -47,13 +46,13 @@ function Sidebar() {
         </ul>
       </div>
 
-      <div className="Sidebar-Categories-follow flex justify-center">
+      <div className="Sidebar-Categories-follow  flex justify-center w-full h-auto rounded-lg shadow-md flex items-center">
         <span>FOLLOW US</span>
-        <div className="Sidebar-Categories-follow-icons">
-          <i className="fa-brands fa-square-facebook"></i>
-          <i className="fa-brands fa-twitter"></i>
-          <i className="fa-brands fa-instagram"></i>
-          <i className="fa-brands fa-pinterest"></i>
+        <div className="Sidebar-Categories-follow-icons ">
+          <i className="fa-brands fa-square-facebook text-blue-800"></i>
+          <i className="fa-brands fa-twitter text-blue-500"></i>
+          <i className="fa-brands fa-instagram text-red-400"></i>
+          <i className="fa-brands fa-pinterest text-red-500"></i>
         </div>
       </div>
     </div>
