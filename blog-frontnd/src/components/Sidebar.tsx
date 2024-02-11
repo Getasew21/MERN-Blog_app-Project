@@ -4,9 +4,11 @@ import axios from "axios";
 import { NavLink } from 'react-router-dom'
 import { Context } from "../context/Context";
 import { useContext } from "react";
-
+interface Category {
+  name: string;
+}
 function Sidebar() {
-  const [cats, setCats] = useState([]);
+  const [cats, setCats] =useState<Category[]>([]);
 
   useEffect(() => {
     const getCats = async () => {

@@ -1,9 +1,11 @@
 import { NavLink } from "react-router-dom"
 import { useEffect,useState } from "react";
 import axios from "axios";
-
+interface Category {
+  name: string;
+}
 function Category() {
-const [cats, setCats] = useState([]);
+const [cats, setCats] = useState<Category[]>([]);
 useEffect(() => {
     const getCats = async () => {
       try {

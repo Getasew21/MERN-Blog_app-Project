@@ -4,20 +4,26 @@ import { NavLink } from 'react-router-dom';
 import { Context } from '../context/Context';
 
 function Navbar() {
-  const { user, dispatch } = useContext(Context);
+  const { user} = useContext(Context);
   const PF = "http://localhost:5000/images/";
 
   const [open, setOpen] = useState(false);
 
   return (
     <div className='shadow-md w-full fixed top-0 left-0'>
-      <div className='md:flex items-center gap-60 bg-white py-4 md:px-10 px-7'>
+      <div className='md:flex items-center justify-between bg-white py-4 md:px-10 px-7'>
         <div className='font-bold text-2xl cursor-pointer flex items-center font-[Poppins] text-gray-800'>
           <span className='text-3xl text-yellow-500 mr-1 pt-2'>BlogIY</span>
         </div>
 
         <div onClick={() => setOpen(!open)} className='text-3xl absolute right-8 top-6 cursor-pointer md:hidden'>
-          <ion-icon name={open ? "close-outline" : "menu-outline"}></ion-icon>
+        <span
+  className={`material-symbols-outlined text-3xl cursor-pointer ${
+    open ? 'text-gray-800' : 'text-gray-800'
+  }`}
+>
+  {open ? 'close' : 'menu'}
+</span>
         </div>
 
         <ul className={`md:flex md:items-center  md:pb-0 pb-12 absolute md:static bg-gray-800 justify-center md:bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'opacity-100 top-20' : 'top-[-490px]'} md:opacity-100 opacity-100`}>

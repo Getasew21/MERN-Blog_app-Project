@@ -1,7 +1,7 @@
 
 import { Action } from './Reducer';
 
-export const loginStart = (userCredentials: any): Action => ({
+export const loginStart = (): Action => ({
   type: "LOGIN_START",
 });
 
@@ -16,7 +16,7 @@ export const loginFailure = (): Action => ({
 export const LogOut = (): Action => ({
   type: "LogOut",
 });
-export const UpdateStart = (userCredentials:any): Action => ({
+export const UpdateStart = (): Action => ({
   type: "UPDATE_START",
 });
 export const UpdateSuccess = (user: any): Action => ({

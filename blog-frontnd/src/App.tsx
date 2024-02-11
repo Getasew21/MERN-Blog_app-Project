@@ -1,5 +1,4 @@
 
-import Topbar from './components/Topbar'
 import Footer from './components/Footer'
 import './App.css'
 import Home from './pages/Home'

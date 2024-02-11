@@ -3,10 +3,10 @@ import { NavLink } from 'react-router-dom'
 import { useContext } from 'react'
 import {Context} from '../context/Context'
 function Topbar() {
-  const {user,dispatch}=useContext(Context);
-  const handleLogout = ()=>{
-  dispatch({type: "LogOut"})
-  };
+  const {user}=useContext(Context);
+  // const handleLogout = ()=>{
+  // dispatch({type: "LogOut"})
+  // };
   const PF = "http://localhost:5000/images/"
   return (
       <div className='Top-bar '>
