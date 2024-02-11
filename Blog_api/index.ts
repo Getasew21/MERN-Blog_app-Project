@@ -9,21 +9,17 @@ import categoryRoute from "./routes/categories";
 import multer, { Multer } from "multer";
 import path from "path";
 import cors from "cors";
-
 dotenv.config();
 const app: Express = express();
 const http =require('http');
 const server =http.createServer(app);
 const {Server}=require("socket.io");
 const io = new Server(server);
-
+// "module": "NodeNext",
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use(express.json());
-
 app.use(cors());
-
-
 app.use("/images", express.static(path.resolve(__dirname, "src/images")));
 mongoose
   .connect(process.env.MONGO_URL)
