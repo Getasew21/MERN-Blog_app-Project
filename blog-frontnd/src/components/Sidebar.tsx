@@ -20,11 +20,12 @@ function Sidebar() {
       }
     };
     getCats();
+
+    PF + user.profilePic;
   }, []);
 
   const { user } = useContext(Context);
   const PF = "http://localhost:5000/images/";
-
   return (
     <div className="Sidebar hidden  lg:flex text-center justify-center mt-20">
       <div className="Sidebar-About  w-full h-auto rounded-lg shadow-md flex items-center pr-7">
