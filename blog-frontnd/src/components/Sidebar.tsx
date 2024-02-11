@@ -46,7 +46,7 @@ function Sidebar() {
         </ul>
       </div>
 
-      <div className="Sidebar-Categories-follow  flex justify-center w-full h-auto rounded-lg shadow-md flex items-center">
+      <div className="Sidebar-Categories-follow  flex. justify-center w-full h-auto rounded-lg shadow-md flex items-center">
         <span>FOLLOW US</span>
         <div className="Sidebar-Categories-follow-icons ">
           <i className="fa-brands fa-square-facebook text-blue-800"></i>
