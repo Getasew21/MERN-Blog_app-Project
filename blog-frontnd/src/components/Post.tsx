@@ -1,13 +1,9 @@
 
-// import { useEffect } from 'react';
 import  { NavLink } from 'react-router-dom'
-// import {  io } from 'socket.io-client';
 
 
 
-// const socket =io('/',{
-//   reconnection:true
-// })
+
 interface Category {
   name: string;
 }
@@ -24,10 +20,7 @@ interface Props {
 }
 
 const Post: React.FC<Props> = ({ post }) => {
-  // useEffect(()=>{
-  //   console.log('SOCKET IO',socket);
-  // },[])
-
+  
   const PF="https://blogiy-mern-back.onrender.com/images/";
 
   console.log(post.photo)
