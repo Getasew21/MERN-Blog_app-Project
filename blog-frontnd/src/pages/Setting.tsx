@@ -19,7 +19,7 @@ function Setting() {
   const [password, setPassword] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
   const { user, dispatch } = useContext(Context);
-  const PF = "https://localhost:5000/images/";
+  const PF = "https://blogiy-mern-back.onrender.com/images/";
 
   useEffect(() => {
     setUsername(user.username);
@@ -36,7 +36,7 @@ function Setting() {
   }
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:5000/api/users/deleteuser/${user._id}`, {
+      await axios.delete(`https://blogiy-mern-back.onrender.com/api/users/deleteuser/${user._id}`, {
         data: { username: user.username, userId:user._id, password:user.password },
       });
       window.location.replace("/");
@@ -64,7 +64,7 @@ function Setting() {
       updatedUser.profilePic = filename;
 
       try {
-      await axios.post("http://localhost:5000/api/upload",formData);
+      await axios.post("https://blogiy-mern-back.onrender.com/api/upload",formData);
         setSuccess(true);
         // dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
         // dispatch({ type: "UPDATE_PROFILE_PICTURE", payload: filename });
@@ -75,7 +75,7 @@ function Setting() {
 
     try {
       const res =await axios.put(
-        "http://localhost:5000/api/users/updateuser/"+ user._id,updatedUser
+        "https://blogiy-mern-back.onrender.com/users/updateuser/"+ user._id,updatedUser
       );
       setSuccess(true);
       dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
@@ -85,16 +85,11 @@ function Setting() {
     }
   };
 
-  // const handleFileInputChange = (e: ChangeEvent<HTMLInputElement>) => {
-  //   if (e.target.files && e.target.files.length > 0) {
-  //     setFile(e.target.files[0]);
-  //   }
-  // };
+
 console.log(user)
 const handleLogout = ()=>{
   dispatch({type: "LogOut"})
   };
-// const PF = "http://localhost:5000/images/"
   return (
     <div className="settings mt-20">
       <div className="settingWrapper ">

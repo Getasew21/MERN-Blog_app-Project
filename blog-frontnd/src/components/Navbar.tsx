@@ -5,7 +5,7 @@ import { Context } from '../context/Context';
 
 function Navbar() {
   const { user} = useContext(Context);
-  const PF = "http://localhost:5000/images/";
+  const PF = "https://blogiy-mern-back.onrender.com/images/";
 
   const [open, setOpen] = useState(false);
 

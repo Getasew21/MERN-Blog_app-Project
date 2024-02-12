@@ -13,19 +13,17 @@ function Sidebar() {
   useEffect(() => {
     const getCats = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/categories/get");
+        const res = await axios.get("https://blogiy-mern-back.onrender.com/api/categories/get");
         setCats(res.data);
       } catch (error) {
         console.log(error);
       }
     };
     getCats();
-
-    PF + user.profilePic;
   }, []);
 
   const { user } = useContext(Context);
-  const PF = "http://localhost:5000/images/";
+  const PF = "https://blogiy-mern-back.onrender.com/images/";
   return (
     <div className="Sidebar hidden  lg:flex text-center justify-center mt-20">
       <div className="Sidebar-About  w-full h-auto rounded-lg shadow-md flex items-center pr-7">

@@ -28,7 +28,7 @@ const Post: React.FC<Props> = ({ post }) => {
   //   console.log('SOCKET IO',socket);
   // },[])
 
-  const PF="http://localhost:5000/images/";
+  const PF="https://blogiy-mern-back.onrender.com/images/";
 
   console.log(post.photo)
   return (
