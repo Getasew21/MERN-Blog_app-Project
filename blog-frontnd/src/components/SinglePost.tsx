@@ -78,7 +78,7 @@ const SinglePost: React.FC = () => {
   console.log(post.photo)
 
   return (
-    <div className="singlePost">
+    <div className="singlePost mr-5">
       {isDeleted ? (
         <div className="deleted">
         <p className="deletedMessage">Post has been deleted!</p>
