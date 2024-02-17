@@ -136,9 +136,10 @@ const handleLogout = ()=>{
             onChange={(e) => setPassword(e.target.value)}
           />
           <button className="settingsSubmit bg-[#FFA726] text-white font-bold " type="submit">Update</button>
+          <ul>
           <li className='Top-bar-nav-ul-logout cursor-pointer hover:text-black font-semibold text-lg list-none' onClick={handleLogout}>
   {user && "LOGOUT"}
-</li>
+</li></ul>
           {success && (
             <span style={{ color: "green", textAlign: "center", margin: "20px" }}>
               Updated successfully!!
