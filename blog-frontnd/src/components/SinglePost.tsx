@@ -91,6 +91,7 @@ const SinglePost: React.FC = () => {
             <input
               type="text"
               value={title}
+              placeholder={title}
               className="singlePostTitleInput"
               autoFocus
               onChange={(e) => setTitle(e.target.value)}
@@ -122,6 +123,7 @@ const SinglePost: React.FC = () => {
           </div>
           {updateMode ? (
             <textarea
+              placeholder={desc}
               className="singlePostDescInput"
               value={desc}
               onChange={(e) => setDesc(e.target.value)}

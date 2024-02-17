@@ -111,7 +111,8 @@ const handleLogout = ()=>{
             <input
               type="file"
               id="fileInput"
-              // name="file"
+              name="fileInput"
+              placeholder={"file"}
               style={{ display: "none" }}
               onChange={(e)=>setFile(e.target.files![0])}
             />
@@ -119,19 +120,19 @@ const handleLogout = ()=>{
           <label className='font-semibold text-lg'>Username</label>
           <input
             type="text"
-            defaultValue={user.username}
+            placeholder={user.name}
             onChange={(e) => setUsername(e.target.value)}
           />
           <label className='font-semibold text-lg'>Email</label>
           <input
             type="email"
-            defaultValue={user.email}
+            placeholder={user.email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <label className='font-semibold text-lg'>Password</label>
           <input
             type="password"
-            defaultValue={user.password}
+            placeholder={user.password}
             onChange={(e) => setPassword(e.target.value)}
           />
           <button className="settingsSubmit bg-[#FFA726] text-white font-bold " type="submit">Update</button>
