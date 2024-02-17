@@ -22,9 +22,7 @@ function Searchbar(): JSX.Element {
     <div className={`Searchbar${isSticky ? ' sticky' : ''}`}>
       <form>
         <input type="text" placeholder="Search..." />
-        <button type="submit">
           <i className="fa-solid fa-magnifying-glass"></i>
-        </button>
       </form>
     </div>
   );
