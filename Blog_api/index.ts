@@ -51,6 +51,6 @@ app.use("/api/categories", categoryRoute);
 
 const port = process.env.PORT || 5000;
 
-app.listen(5000, () => {
+app.listen(process.env.PORT || 5000, () => {
   console.log("Backend is running on 5000.");
 });

@@ -5,7 +5,7 @@ import { Context } from '../context/Context';
 
 function Navbar() {
   const { user} = useContext(Context);
-  const PF = "https://blogiy-mern-back.onrender.com/images/";
+  const PF = "http://localhost:5000//images/";
 
   const [open, setOpen] = useState(false);
 
@@ -27,11 +27,11 @@ function Navbar() {
         </div>
 
         <ul className={`md:flex md:items-center md:mr-4  md:pb-0 pb-12 absolute md:static bg-gray-800 justify-center md:bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'opacity-100 top-20' : 'top-[-490px]'} md:opacity-100 opacity-100`}>
-          <NavLink style={{ textDecoration: "none", color: "rgb(136, 134, 134)" }} to='/'><li className='md:ml-8 text-xl text-gray-100 md:text-gray-800 hover:text-gray-400 duration-500 md:my-0 my-7'>HOME</li></NavLink>
-          <NavLink style={{ textDecoration: "none", color: "rgb(136, 134, 134)" }} to='/register'><li className='md:ml-8 text-xl text-gray-100 md:text-gray-800 hover:text-gray-400 duration-500 md:my-0 my-7'>REGISTER</li></NavLink>
-          <NavLink style={{ textDecoration: "none", color: "rgb(136, 134, 134)" }} to='/write'><li className='md:ml-8 text-xl text-gray-100 md:text-gray-800 hover:text-gray-400 duration-500 md:my-0 my-7'>WRITE</li></NavLink>
-          <NavLink style={{ textDecoration: "none", color: "rgb(136, 134, 134)" }} to='/about'><li className='md:ml-8 text-xl text-gray-100 md:text-gray-800 hover:text-gray-400 duration-500 md:my-0 my-7'>ABOUT</li></NavLink>
-          <NavLink style={{ textDecoration: "none", color: "rgb(136, 134, 134)" }} to="/setting"><li className='md:ml-8 text-xl text-gray-100 md:text-gray-800 hover:text-gray-400 
+          <NavLink style={{ textDecoration: "none", color: "rgb(136, 134, 134)" }} to='/'><li onClick={() => setOpen(!open)} className='  md:ml-8 text-xl text-gray-100 md:text-gray-800 hover:text-gray-400 duration-500 md:my-0 my-7'>HOME</li></NavLink>
+          <NavLink style={{ textDecoration: "none", color: "rgb(136, 134, 134)" }} to='/register'><li onClick={() => setOpen(!open)} className='md:ml-8 text-xl text-gray-100 md:text-gray-800 hover:text-gray-400 duration-500 md:my-0 my-7'>REGISTER</li></NavLink>
+          <NavLink style={{ textDecoration: "none", color: "rgb(136, 134, 134)" }} to='/write'><li onClick={() => setOpen(!open)} className='md:ml-8 text-xl text-gray-100 md:text-gray-800 hover:text-gray-400 duration-500 md:my-0 my-7'>WRITE</li></NavLink>
+          <NavLink style={{ textDecoration: "none", color: "rgb(136, 134, 134)" }} to='/about'><li onClick={() => setOpen(!open)} className='md:ml-8 text-xl text-gray-100 md:text-gray-800 hover:text-gray-400 duration-500 md:my-0 my-7'>ABOUT</li></NavLink>
+          <NavLink style={{ textDecoration: "none", color: "rgb(136, 134, 134)" }} to="/setting"><li onClick={() => setOpen(!open)} className='md:ml-8 text-xl text-gray-100 md:text-gray-800 hover:text-gray-400 
  duration-500 md:my-0 my-7 '>SETTING</li></NavLink>
           {user && (
           <NavLink to="/setting" key="profileimg" className="hidden md:flex  ">

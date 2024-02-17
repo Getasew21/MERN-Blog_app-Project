@@ -21,7 +21,7 @@ interface Props {
 
 const Post: React.FC<Props> = ({ post }) => {
   
-  const PF="https://blogiy-mern-back.onrender.com/images/";
+  const PF="http://localhost:5000/images/";
 
   console.log(post.photo)
   return (
