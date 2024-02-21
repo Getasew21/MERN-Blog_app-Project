@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "preinstall": "npm install -g npm@7.24.0",
-    "start": "npx ts-node ./index.ts",
+    "start": "ts-node ./index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
