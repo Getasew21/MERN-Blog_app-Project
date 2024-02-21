@@ -9,7 +9,7 @@ const [cats, setCats] = useState<Category[]>([]);
 useEffect(() => {
     const getCats = async () => {
       try {
-        const res = await axios.get("https://blogiy-mern-back.onrender.com/api/categories/get");
+        const res = await axios.get("http://localhost:5000/api/categories/get");
         setCats(res.data);
       } catch (error) {
         console.log(error);

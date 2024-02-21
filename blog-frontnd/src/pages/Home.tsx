@@ -12,7 +12,7 @@ function Home() {
   // console.log(location);
   useEffect(()=>{
   const fetchPosts = async()=>{
-  const res = await axios.get('https://blogiy-mern-back.onrender.com/api/posts/allposts' +  search)
+  const res = await axios.get('http://localhost:5000/api/posts/allposts' +  search)
    setPosts(res.data)
   }
   fetchPosts()

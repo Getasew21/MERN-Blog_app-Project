@@ -29,14 +29,14 @@ function Write() {
       newPost.photo = filename;
 
       try {
-        await axios.post("https://blogiy-mern-back.onrender.com/api/upload", formData);
+        await axios.post("http://localhost:5000/api/upload", formData);
       } catch (error) {
         console.error(error);
       }
     }
 
     try {
-      await axios.post("https://blogiy-mern-back.onrender.com/api/posts/create", newPost);
+      await axios.post("http://localhost:5000/api/posts/create", newPost);
     } catch (err) {
       console.error(err);
     }

@@ -24,7 +24,7 @@ const SinglePost: React.FC = () => {
     createdAt: "",
     desc: ""
   });
-  const PF="https://blogiy-mern-back.onrender.com/images/";
+  const PF="http://localhost:5000/api/images/";
   const { user } = useContext(Context);
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
@@ -35,7 +35,7 @@ const SinglePost: React.FC = () => {
     const getPost = async () => {
       try {
         const res = await axios.get<Post>(
-          `https://blogiy-mern-back.onrender.com/api/posts/get/${path}`
+          `http://localhost:5000/api/posts/get/${path}`
         );
         setPost(res.data);
         setTitle(res.data.title);
@@ -50,7 +50,7 @@ const SinglePost: React.FC = () => {
   const handleDelete = async () => {
     console.log(user?.username);
     try {
-      await axios.delete<void>("https://blogiy-mern-back.onrender.com/api/posts/delete/" + post._id, {
+      await axios.delete<void>("http://localhost:5000/api/posts/delete/" + post._id, {
         data: { username: user?.username}
       });
       console.log("Post deleted successfully");
@@ -64,7 +64,7 @@ const SinglePost: React.FC = () => {
     console.log(post.username)
    
     try {
-      await axios.put<void>("https://blogiy-mern-back.onrender.com/api/posts/update/" + post._id, {username: user?.username,
+      await axios.put<void>("http://localhost:5000/api/posts/update/" + post._id, {username: user?.username,
         title,
         desc
       });
