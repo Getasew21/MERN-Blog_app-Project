@@ -5,7 +5,11 @@ import { Context } from '../context/Context';
 
 function Navbar() {
   const { user} = useContext(Context);
+<<<<<<< HEAD
   const PF = "http://localhost:5000//images/";
+=======
+  const PF = "http://localhost:5000/images/";
+>>>>>>> 2e3c2d22c5e5fca8d7e645f667dc7acdf2e2f755
 
   const [open, setOpen] = useState(false);
 

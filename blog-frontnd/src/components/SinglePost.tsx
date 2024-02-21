@@ -78,7 +78,7 @@ const SinglePost: React.FC = () => {
   console.log(post.photo)
 
   return (
-    <div className="singlePost">
+    <div className="singlePost mr-5">
       {isDeleted ? (
         <div className="deleted">
         <p className="deletedMessage">Post has been deleted!</p>
@@ -91,6 +91,7 @@ const SinglePost: React.FC = () => {
             <input
               type="text"
               value={title}
+              placeholder={title}
               className="singlePostTitleInput"
               autoFocus
               onChange={(e) => setTitle(e.target.value)}
@@ -122,6 +123,7 @@ const SinglePost: React.FC = () => {
           </div>
           {updateMode ? (
             <textarea
+              placeholder={desc}
               className="singlePostDescInput"
               value={desc}
               onChange={(e) => setDesc(e.target.value)}
