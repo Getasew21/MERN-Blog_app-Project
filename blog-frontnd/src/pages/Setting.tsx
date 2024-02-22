@@ -3,7 +3,6 @@ import { useContext, useState, FormEvent, useEffect } from 'react';
 import Sidebar from '../components/Sidebar';
 import { Context } from '../context/Context';
 import axios from 'axios';
-
 interface UpdatedUser {
   userId: string;
   username: string | null;
@@ -19,13 +18,13 @@ function Setting() {
   const [password, setPassword] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
   const { user, dispatch } = useContext(Context);
-  const PF = "https://blogiy-mern-back.onrender.com/images/";
+  const PF = "http://localhost:5000/images/";
 
   useEffect(() => {
     setUsername(user.username);
     setEmail(user.email);
     setPassword(user.password);
-    handleSubmit;
+    handleSubmit();
   }, [user]);
 
 
@@ -36,7 +35,7 @@ function Setting() {
   }
   const handleDelete = async () => {
     try {
-      await axios.delete(`https://blogiy-mern-back.onrender.com/api/users/deleteuser/${user._id}`, {
+      await axios.delete(`http://localhost:5000/api/users/deleteuser/${user._id}`, {
         data: { username: user.username, userId:user._id, password:user.password },
       });
       window.location.replace("/");
@@ -64,7 +63,7 @@ function Setting() {
       updatedUser.profilePic = filename;
 
       try {
-      await axios.post("https://blogiy-mern-back.onrender.com/api/upload",formData);
+      await axios.post("http://localhost:5000/api/upload",formData);
         setSuccess(true);
         // dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
         // dispatch({ type: "UPDATE_PROFILE_PICTURE", payload: filename });
@@ -75,7 +74,7 @@ function Setting() {
 
     try {
       const res =await axios.put(
-        "https://blogiy-mern-back.onrender.com/users/updateuser/"+ user._id,updatedUser
+        "http://localhost:5000/api/users/updateuser/"+ user._id,updatedUser
       );
       setSuccess(true);
       dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
