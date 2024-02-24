@@ -49,7 +49,6 @@ router.put('/update/:id', async (req: Request, res: Response) => {
     res.status(500).json(err);
   }
 });
-
 // DELETE POST
 router.delete('/delete/:id', async (req: Request, res: Response) => {
   try {
@@ -68,7 +67,6 @@ router.delete('/delete/:id', async (req: Request, res: Response) => {
     res.status(500).json(err);
   }
 });
-
 // GET ALL POSTS
 router.get('/allposts', async (req: Request, res: Response) => {
   const username = req.query.user as string;
