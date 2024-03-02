@@ -7,7 +7,6 @@ function Login(): JSX.Element {
   const userRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
   const { dispatch, isFetching } = useContext(Context);
-
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     dispatch({ type: "LOGIN_START" });
