@@ -21,7 +21,9 @@ app.use(express.json());
 app.use(cors());
 app.use("/images", express.static(path.resolve(__dirname, "src/images")));
 mongoose
-  .connect(process.env.MONGO_URL)
+  .connect(
+    "mongodb+srv://dawithabitamu31:201111201212@cluster0.tjrffbl.mongodb.net/?retryWrites=true&w=majority"
+  )
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.log(err));
 app.use("*", (req, res, next) => {
@@ -37,7 +39,7 @@ const storage = multer.diskStorage({
     cb(null, req.body.name);
   },
 });
-app.get("/", (req, res) => {
+app.get("/", (req: Request, res: Response) => {
   res.send("Hello World");
 });
 
