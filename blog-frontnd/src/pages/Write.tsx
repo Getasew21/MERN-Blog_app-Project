@@ -12,7 +12,6 @@ function Write() {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-
     const newPost = {
       username: user?.username,
       title,
