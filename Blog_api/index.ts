@@ -9,7 +9,7 @@ import multer, { Multer } from "multer";
 import path from "path";
 import cors from "cors";
 dotenv.config();
-const app: Express = express();
+const app = express();
 const http = require("http");
 const server = http.createServer(app);
 const { Server } = require("socket.io");
